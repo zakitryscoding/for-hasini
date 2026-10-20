@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="background_music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" autoplay loop preload="auto"></audio>
+    <audio id="background_music" src="open-arms" autoplay loop></audio>
     <div class="parallax">
         <img src="stars.png" id="stars">
         <img src="meteorid.png" id="meteorid">

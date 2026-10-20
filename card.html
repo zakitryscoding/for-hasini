@@ -1,47 +1,74 @@
-(function() {
-    function $(id) {
-      return document.getElementById(id);
-    }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <title>Happy Anniversary Baby!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="card-style.css">
+        <meta name="theme-color" content="#F26B38">
+    </head>
 
-    var card = $('card'),
-        openB = $('open'),
-        closeB = $('close'),
-        audio = $('background-music'),
-        timer = null;
-
-    function startMusic() {
-      if (!audio) return;
-      audio.volume = 0.45;
-      audio.play().catch(function () {});
-    }
-
-    if (openB) {
-      openB.addEventListener('click', function () {
-        startMusic();
-        card.setAttribute('class', 'open-half');
-        if (timer) clearTimeout(timer);
-        timer = setTimeout(function () {
-          card.setAttribute('class', 'open-fully');
-          timer = null;
-        }, 1000);
-      });
-    }
-
-    if (closeB) {
-      closeB.addEventListener('click', function () {
-        card.setAttribute('class', 'close-half');
-        if (timer) clearTimeout(timer);
-        timer = setTimeout(function () {
-          card.setAttribute('class', '');
-          timer = null;
-        }, 1000);
-      });
-    }
-
-    if (audio) {
-      audio.load();
-      window.addEventListener('pointerdown', startMusic, { once: true });
-      window.addEventListener('keydown', startMusic, { once: true });
-    }
-
-}());
+    <body>
+        <br><br><br><br><br>
+        <audio id="background-music" src="open-arms" autoplay loop></audio>
+        <div id="card">
+            <div id="card-inside">
+                <div class="wrap wishesFont">
+                    <center>
+                        <p>
+                            Hasini, okay so I tried to write this like ten times and kept deleting it because nothing sounded good enough for you. So I'm just going to say it how I'd say it if you were here, because that's the only way it ever feels honest. You are my favorite person, my favorite place to be, and the person who makes everything feel softer, warmer, and more beautiful.
+                        </p>
+                        <p>
+                            We’ve had our laughs, our late-night talks, our little moments that ended up meaning more than I can explain, and somehow they made every day brighter. You make ordinary days feel special and hard days feel lighter. I love the way you understand me without needing a million words.
+                        </p>
+                        <p>
+                            Thank you for being my peace, my joy, and the person I want to share everything with. I love the way you make me feel, and I’m so lucky to call you mine. You mean so much to me, more than I think I can fully put into words, and I’m grateful for every second we’ve had together.
+                        </p>
+                        <p>
+                            I know this is only year one, and I can't wait for all the ones after it. I'm not going anywhere, you're stuck with me now hehe.
+                        </p>
+                        <p>
+                            Happy anniversary, my love! 💕
+                        </p>
+                    </center>
+                    <p class="signed">Your Baby Boy,
+                            <br> ahmed
+                    </p>
+                </div>
+            </div>
+        <div id="card-front">
+        <div class="wrap">
+        <h1>Happy Anniversary Baby!</h1>
+        <div class="cake_and_velas">
+        <div class="velas">
+            <div class="fuego"></div>
+            <div class="fuego"></div>
+            <div class="fuego"></div>
+            <div class="fuego"></div>
+            <div class="fuego"></div>
+        </div>
+        <svg id="cake" version="1.1" x="0px" y="0px" width="290px" height="500px" viewBox="0 0 200 500" enable-background="new 0 0 200 500" xml:space="preserve"><path fill="#a88679" d="M173.667-13.334[...]
+        </div>
+        </div>
+        <button id="open" data-balloon="Click to Open Card!" data-balloon-length="medium" data-balloon-pos="left" data-balloon-visible>&gt;</button>
+        <button id="close" data-balloon="! bɿɒɔ ɘƨolɔ oɈ ʞɔilƆ" data-balloon-length="medium" data-balloon-pos="left" data-balloon-visible>&lt;</button>
+        <div class="card-front_inside">
+        <br> <br> <br>
+        <div class="polaroid">
+        <div class="img" style="background-image: url('hasini.jpg')"></div>
+        </div>
+        <div class="shadow"></div>
+        </div>
+        </div>
+        <script  src="card.js"></script>
+        <button class="back-button" onclick="window.location.href = 'index.html';">Back to home</button>
+    </body>
+</html>

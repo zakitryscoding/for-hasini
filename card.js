@@ -1,4 +1,5 @@
 let stars = document.getElementById('stars');
+// let meteorid = document.getElementById('meteorid');
 let rocket = document.getElementById('rocket');
 let text = document.getElementById('text');
 let button = document.getElementById('button');
@@ -13,21 +14,11 @@ window.addEventListener('scroll', function() {
     button.style.marginBottom = value * 1 + 'px';
 });
 
+// Browsers block autoplay with sound, so start the music on the first interaction instead
 function startMusic() {
-    if (!audio) return;
-    audio.volume = 0.45;
     audio.play().catch(function() {});
 }
-
 startMusic();
 ['click', 'touchstart', 'scroll', 'keydown'].forEach(function(evt) {
     window.addEventListener(evt, startMusic, { once: true });
 });
-
-if (audio) {
-    audio.load();
-}
-
-if (button) {
-    button.addEventListener('click', startMusic, { once: true });
-}
