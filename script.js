@@ -1,24 +1,46 @@
-let stars = document.getElementById('stars');
-// let meteorid = document.getElementById('meteorid');
-let rocket = document.getElementById('rocket');
-let text = document.getElementById('text');
-let button = document.getElementById('button');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY ANNIVERSARYYYYY!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background_music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" autoplay loop preload="auto"></audio>
+    <div class="parallax">
+        <img src="stars.png" id="stars">
+        <img src="meteorid.png" id="meteorid">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.7.7/build/spline-viewer.js"></script>
+        <spline-viewer id="rocket" hint loading-anim-type="spinner-small-dark" url="https://prod.spline.design/2FXnPGQUFHUG7pbB/scene.splinecode"></spline-viewer>
+        <h1 id="text">I <span style="color: pink;">Love</span> You in <br>Every Universe <br><span style="color: pink;">Hasini!</span></h1>
+        <a href="card.html" id="button">Explore</a>
+    </div>
+    <div class="description">
+        <h2>Dear <span style="color: lightcoral;">Hasini</span>🤍</h2><br>
+        <p>
+            My PRETTTYYYY BABBYYYY HASINIII SESHAMMMM, I cant believe it has been a whole year thats 365 days btw.
+            I loved every single moment with you this whole year. Every high every low have been the most sweet and fullfulling moments of my life.
+            I couldnt tell you in words how much i love you and wish to be with you forever and ever and ever and ever
+        </p>
+        <p>
+            <br>I wish this relationship lasts for a lifetime and we grow old and u take care of me and I take care of you and our children take care of us heheheheeh.
+        </p>
+        <p>
+            <br>The moon is really beautiful tonight
+        </p>
+        <p>
+            <br>I love you my little oreo.
+        </p>
+        <p>
+            <br>I love you more than words can express.
+        </p>
+        <p>
+            Once again, happy anniversary, my loveliest hasu! 💖
+        </p>
+    </div>
 
-var audio = document.getElementById('background_music');
-
-window.addEventListener('scroll', function() {
-    let value = window.scrollY;
-    stars.style.left = value * 0.25 + 'px';
-    rocket.style.top = value * -0.5 + 'px';
-    text.style.marginBottom = value * 1 + 'px';
-    button.style.marginBottom = value * 1 + 'px';
-});
-
-// Browsers block autoplay with sound, so start the music on the first interaction instead
-function startMusic() {
-    audio.play().catch(function() {});
-}
-startMusic();
-['click', 'touchstart', 'scroll', 'keydown'].forEach(function(evt) {
-    window.addEventListener(evt, startMusic, { once: true });
-});
+    <script src="script.js"></script>
+</body>
+</html>
